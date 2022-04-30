@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const { Title } = Typography;
 function HomePage() {
   const { data, isFetching } = useGetCryptosQuery(10);
-  console.log(data);
   if (isFetching) return <h3>Loading .....</h3>;
   const globalStats = data?.data?.stats;
   return (
