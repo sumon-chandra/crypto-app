@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const { Title } = Typography;
 function HomePage() {
-  const { data, isFetching } = useGetCryptosQuery(10);
-  if (isFetching) return <h3>Loading .....</h3>;
+  const { data, isFetching } = useGetCryptosQuery(9);
+  if (isFetching) return <h3 className="loading">Loading .....</h3>;
   const globalStats = data?.data?.stats;
   return (
     <div>
@@ -51,11 +51,12 @@ function HomePage() {
         <Title level={2} className="home-title">
           Top 10 Cryptocurrencies in the world
         </Title>
+        <Title level={3} className="show-more">
+          <Link to="/cryptocurrencies">Show more</Link>
+        </Title>
       </div>
       <Cryptocurrencies simplified />
-      <Title level={3} className="show-more">
-        <Link to="/cryptocurrencies">Show more</Link>
-      </Title>
+
       {/* ================= Top 10 Crypto News */}
       <div className="home-header-container">
         <Title level={2} className="home-title">

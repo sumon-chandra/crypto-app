@@ -24,27 +24,32 @@ a:hover {
 
 .navbar {
   flex: 0.2;
-  background-color: rgb(0, 21, 41);
+  background: transparent !important;
 }
-
+.ant-layout {
+  background: transparent !important;
+}
 .main {
   flex: 0.8;
   width: 100%;
 }
 .routes {
   padding: 20px;
+  background: transparent !important;
 }
 .nav-container {
   position: fixed;
   left: 0;
   margin: 10px;
   height: 100vh;
+  width: 20rem !important;
   margin: 0px;
-  background-color: rgb(0, 21, 41);
+  background: transparent !important;
+  border-right: 1px solid #00284e;
 }
 
 .logo-container {
-  background-color: #001529;
+  background: transparent !important;
   display: flex;
   padding: 20px;
   align-items: center;
@@ -53,9 +58,34 @@ a:hover {
 .logo {
   margin: 0 0 0 15px;
 }
-.logo a {
-  color: white;
+/* .logo a {
+  color: white !important;
+} */
+.ant-menu {
+  background: transparent !important;
 }
+.ant-menu-item {
+  padding: 1rem 1rem 4rem 1rem !important;
+  background-color: #fefefe0c;
+  margin: 1rem 1rem !important;
+  border-radius: 0.7rem !important;
+}
+
+.ant-menu-title-content a {
+  font-size: 1.4rem !important;
+  color: #d9d9d9 !important;
+}
+.ant-menu-item-icon {
+  font-size: 1.4rem !important;
+  color: #d9d9d9 !important;
+}
+
+.ant-statistic-title,
+.ant-statistic-contentcoin-heading-desc-value,
+.ant-statistic-content-value {
+  color: #d9d9d9 !important;
+}
+
 .menu-control-container {
   display: none !important;
   position: absolute !important;
@@ -65,17 +95,113 @@ a:hover {
   background-color: var(--bgSecondary) !important;
   border: none !important;
 }
-
+.heading {
+  color: #d9d9d9 !important;
+  border-bottom: 1px solid #00284e;
+  padding-bottom: 0.5rem !important;
+}
 .loader {
   height: 81vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.loading {
+  color: #d9d9d9;
+  font-size: 1.5rem;
+}
+.home-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
 
+  border-bottom: 1px solid #00284e !important;
+}
+.ant-statistic {
+  padding: 1rem !important;
+}
+.ant-card {
+  background: #ffffff16 !important;
+  color: #d9d9d9 !important;
+  border: 1px solid #ffffff29 !important;
+}
+.ant-card:hover {
+  -webkit-box-shadow: 1px 2px 33px -14px #0071bd !important;
+  -moz-box-shadow: 1px 2px 33px -14px #0071bd !important;
+  box-shadow: 1px 2px 33px -14px #0071bd !important;
+}
+.ant-card-head {
+  border-bottom: 1px solid #ffffff29 !important;
+}
+.ant-card-head-title {
+  color: #d9d9d9;
+}
+.ant-card-body p {
+  color: #d9d9d9 !important;
+}
+.provider-container {
+  align-items: center;
+}
+.coin-value-statistics-heading p {
+  color: #d9d9d9 !important;
+}
+
+.coin-details-heading p,
+h3 {
+  color: #d9d9d9 !important;
+  font-weight: 400 !important;
+}
+.coin-detail-container canvas {
+  background-color: #ffffffc2 !important;
+}
+.stats {
+  font-weight: 600 !important;
+}
+@media screen and (max-width: 1500px) {
+  .main {
+    margin-left: 50px;
+    flex: 0.9;
+  }
+
+  .ant-menu {
+    width: 19rem;
+  }
+  .ant-menu-item {
+    padding: 2rem 1.4rem 4rem 1.4rem !important;
+  }
+  .coin-detail-container {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
 @media screen and (max-width: 1300px) {
   .main {
     margin-left: 50px;
+    flex: 0.9;
+  }
+  .ant-col {
+    /* padding: 0 !important; */
+  }
+  .ant-menu {
+    width: 17rem;
+  }
+  .ant-menu-item {
+    padding: 1rem 1rem 3.4rem 1rem !important;
+  }
+  .news-image-container {
+    flex-direction: column;
+  }
+
+  .news-title {
+    width: 100% !important;
+  }
+  .coin-detail-container {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .nav-container {
+    width: 16.7rem !important;
   }
 }
 
@@ -83,12 +209,51 @@ a:hover {
   .main {
     margin-left: 50px;
   }
+  .ant-menu {
+    width: 17rem;
+  }
+  .ant-menu-item {
+    padding: 1rem 1rem 3.4rem 1rem !important;
+  }
+  .news-image-container {
+    flex-direction: column;
+  }
+
+  .news-title {
+    width: 100% !important;
+  }
+  .coin-detail-container {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .nav-container {
+    width: 16.4rem !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .main {
     margin-left: 100px;
+    flex: 1;
   }
+  .navbar {
+    flex: 0.3;
+    background: transparent !important;
+  }
+  .ant-menu {
+    width: 17rem;
+  }
+  .ant-menu-item {
+    padding: 1rem 1rem 3.4rem 1rem !important;
+  }
+  .news-image-container {
+    flex-direction: row;
+  }
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -123,13 +288,48 @@ a:hover {
   .ant-menu {
     position: absolute;
     right: 0px;
+    background-color: #001529 !important;
   }
   .home-title {
     font-size: 1.4rem !important;
   }
+
   .show-more {
     font-size: 1.3rem !important;
   }
+
+  .ant-menu-title-content a {
+    font-size: 1rem !important;
+  }
+  .ant-menu-item-icon {
+    font-size: 1rem !important;
+  }
+  .ant-menu-item {
+    padding: 0 0.8rem 2rem 0.8rem !important;
+
+    border-radius: 0.5rem !important;
+  }
+
+  .logo-container {
+    background-color: #001529 !important;
+    padding: 1rem 2rem !important;
+    justify-content: space-between;
+    align-items: center !important;
+  }
+
+  .nav-container {
+    width: 100% !important;
+  }
+}
+.stats-container {
+  padding-top: 2rem !important;
+}
+.ant-typography {
+  color: #d9d9d9 !important;
+}
+
+.ant-row canvas {
+  background-color: #d9d9d9 !important;
 }
 
 .coin-detail-container {
@@ -141,7 +341,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #ffffff29 !important;
   padding-top: 20px;
   padding-bottom: 20px;
   gap: 10px;
@@ -176,6 +376,9 @@ a:hover {
   font-weight: 700 !important;
   margin-top: 20px !important;
   color: var(--pink) !important;
+}
+.coin-heading-desc {
+  color: #d9d9d9;
 }
 
 .coin-stats {
@@ -332,11 +535,11 @@ a:hover {
   flex-wrap: wrap !important;
 }
 .price-change {
-  font-weight: 900 !important;
+  font-weight: 600 !important;
 }
 .current-price {
   margin-top: 0px !important;
-  font-weight: 900 !important;
+  font-weight: 600 !important;
 }
 .home-heading-container {
   display: flex;
